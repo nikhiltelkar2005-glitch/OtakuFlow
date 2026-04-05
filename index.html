@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Otaku-Flow | Watch Popular Anime, Play Games & Shop Online</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <a href="#" class="logo">
+            <div class="logo-icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z" />
+                </svg>
+            </div>
+            OTAKU-FLOW
+        </a>
+
+        <nav class="nav-links">
+            <a href="#" id="btn-home" class="active">Home</a>
+            <a href="#" id="btn-first-time">Newbie Hub</a>
+            <a href="#" id="btn-top">Heat</a>
+            <a href="#" id="btn-most-watched">Binge Zone</a>
+            <a href="#" id="btn-trending">New Stuff</a>
+            <a href="#" id="btn-for-you">For You</a>
+        </nav>
+
+        <div class="header-actions">
+            <button class="icon-btn" id="theme-toggle" title="Toggle Light/Dark Mode">
+                <!-- Moon Icon (Dark Mode) -->
+                <svg class="moon-icon" xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg>
+                <!-- Sun Icon (Light Mode) -->
+                <svg class="sun-icon" xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2"/><path d="M12 20v2"/><path d="m4.93 4.93 1.41 1.41"/><path d="m17.66 17.66 1.41 1.41"/><path d="M2 12h2"/><path d="M20 12h2"/><path d="m6.34 17.66-1.41 1.41"/><path d="m19.07 4.93-1.41 1.41"/></svg>
+            </button>
+            <button class="icon-btn" id="toggle-search" title="Search">
+                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+            </button>
+            <button class="icon-btn" id="btn-profile" title="Profile">
+                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+            </button>
+        </div>
+    </header>
+
+    <!-- Profile Sidebar Overlay -->
+    <div id="sidebar-overlay" class="sidebar-overlay"></div>
+
+    <!-- Profile Sidebar Drawer -->
+    <aside id="profile-sidebar" class="profile-sidebar">
+        <div class="sidebar-header">
+            <div class="user-info">
+                <div class="user-avatar">
+                   <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2zm0 18a8 8 0 1 1 8-8 8 8 0 0 1-8 8z"/><path d="M12 6a3 3 0 1 0 3 3 3 3 0 0 0-3-3z"/><path d="M6 19a6 6 0 0 1 12 0"/></svg>
+                </div>
+                <div class="user-details">
+                    <h3>My Profile</h3>
+                </div>
+            </div>
+            <button class="edit-btn">✎</button>
+        </div>
+
+        <div class="sidebar-content">
+            <div class="sidebar-menu-group">
+                <a href="#" class="sidebar-item">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m3 16 4 4 4-4"/><path d="M7 20V4"/><path d="m21 8-4-4-4 4"/><path d="M17 4v16"/></svg>
+                    <span>Switch Profile</span>
+                </a>
+                <a href="#" class="sidebar-item">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12.22 2h-.44a2 2 0 0 0-2 2v.18a2 2 0 0 1-1 1.73l-.43.25a2 2 0 0 1-2 0l-.15-.08a2 2 0 0 0-2.73.73l-.22.38a2 2 0 0 0 .73 2.73l.15.1a2 2 0 0 1 1 1.72v.51a2 2 0 0 1-1 1.74l-.15.09a2 2 0 0 0-.73 2.73l.22.38a2 2 0 0 0 2.73.73l.15-.08a2 2 0 0 1 2 0l.43.25a2 2 0 0 1 1 1.73V20a2 2 0 0 0 2 2h.44a2 2 0 0 0 2-2v-.18a2 2 0 0 1 1-1.73l.43-.25a2 2 0 0 1 2 0l.15.08a2 2 0 0 0 2.73-.73l.22-.39a2 2 0 0 0-.73-2.73l-.15-.08a2 2 0 0 1-1-1.74v-.5a2 2 0 0 1 1-1.74l.15-.1a2 2 0 0 0 .73-2.73l-.22-.38a2 2 0 0 0-2.73-.73l-.15.08a2 2 0 0 1-2 0l-.43-.25a2 2 0 0 1-1-1.73V4a2 2 0 0 0-2-2z"/><circle cx="12" cy="12" r="3"/></svg>
+                    <span>Settings</span>
+                </a>
+            </div>
+
+            <div class="sidebar-menu-divider"></div>
+
+            <div class="sidebar-menu-group">
+                <a href="#" class="sidebar-item">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m3 21 1.9-1.9"/><path d="M14 8V4a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v7a2 2 0 0 0 2 2h4"/><path d="M19 16V4h2"/><path d="M22 21H16V10h6v11Z"/></svg>
+                    <span>Watchlist</span>
+                </a>
+                <a href="#" class="sidebar-item">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 12H3"/><path d="M16 6H3"/><path d="M12 18H3"/><path d="M16 12a4 4 0 0 1 8 0c0 4-4 8-4 8s-4-4-4-8Z"/></svg>
+                    <span>Otakulists</span>
+                </a>
+                <a href="#" class="sidebar-item">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                    <span>History</span>
+                </a>
+            </div>
+
+            <div class="sidebar-menu-divider"></div>
+
+            <div class="sidebar-menu-group">
+                <a href="#" class="sidebar-item">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9"/><path d="M10.3 21a1.94 1.94 0 0 0 3.4 0"/></svg>
+                    <span>Notifications</span>
+                </a>
+                <a href="#" class="sidebar-item">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="14" x="2" y="3" rx="2"/><line x1="2" x2="22" y1="10" y2="10"/></svg>
+                    <span>Gift Card</span>
+                </a>
+            </div>
+
+            <div class="sidebar-menu-divider"></div>
+
+            <div class="sidebar-menu-group">
+                <a href="#" class="sidebar-item logout">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/><polyline points="16 17 21 12 16 7"/><line x1="21" x2="9" y1="12" y2="12"/></svg>
+                    <span>Log Out</span>
+                </a>
+            </div>
+        </div>
+    </aside>
+
+    <!-- Search Overlay -->
+    <div class="search-overlay" id="search-container">
+        <input type="text" id="search-input" placeholder="Search for anime...">
+        <button id="btn-search">SEARCH</button>
+    </div>
+
+    <main>
+        <section class="page-content">
+            <div class="section-header">
+            <h2 class="section-title" id="current-category">Home — Featured</h2>
+            <button id="btn-categories" class="view-link" style="background: none; border: none; cursor: pointer;">Browse Categories ▾</button>
+        </div>
+
+        <!-- Categories / Genre Menu -->
+        <div id="categories-menu" class="categories-overlay">
+            <div class="genre-grid" id="genre-list">
+                <!-- Genres will be injected here -->
+            </div>
+        </div>
+
+            <div class="date-divider" id="current-category">Yesterday</div>
+
+            <!-- This is where app.js will inject the episodes-grid -->
+            <div id="output">
+                <!-- Anime cards will be injected here -->
+            </div>
+        </section>
+    </main>
+
+    <script src="app.js"></script>
+</body>
+
+</html>
