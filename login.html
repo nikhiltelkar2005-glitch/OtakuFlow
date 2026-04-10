@@ -12,27 +12,45 @@
 </head>
 
 <body class="login-page">
+    <!-- Cinematic Background -->
+    <div class="anime-bg-layer">
+        <div class="bokeh-layer"></div>
+        <div class="particle-field"></div>
+        <div class="god-rays"></div>
+    </div>
+
     <div class="auth-container">
         <div class="auth-card">
             <a href="index.html" class="logo" style="margin-bottom: 2rem; justify-content: center;">
-                <span class="logo-text">OTAKU-FLOW</span>
+                <div class="logo-icon">
+                    <img src="logo/4cbf992843f12bc40618bfadd3aa9a9a.jpg" alt="Zoro Jolly Roger">
+                </div>
+                <span class="logo-text" style="font-size: 1.5rem;">OTAKU<span class="flow-accent">FLOW</span></span>
             </a>
-            <h2>Login</h2>
-            <p>Access your personal anime dashboard</p>
+            <div class="auth-header">
+                <h2>Enter the Dojo</h2>
+                <p>Your spirit is recognized... draw your blade to proceed.</p>
+            </div>
             <form id="login-form">
                 <div class="form-group">
-                    <label for="email">Email Address</label>
-                    <input type="email" id="email" placeholder="you@example.com" required>
+                    <label for="email">Spirit Identity (Email)</label>
+                    <input type="email" id="email" placeholder="Enter your spirit signature" required>
                 </div>
                 <div class="form-group">
-                    <label for="password">Password</label>
+                    <label for="password">Secret Technique (Password)</label>
                     <input type="password" id="password" placeholder="••••••••" required>
                 </div>
-                <button type="submit" class="auth-btn">Sign In</button>
+                <button type="submit" class="auth-btn">
+                    <span>Draw Your Blade</span>
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14m-7-7 7 7-7 7"/></svg>
+                </button>
             </form>
             <div class="auth-footer">
-                <p>Don't have an account? <a href="#">Create One</a></p>
-                <p><a href="index.html">Back to Home</a></p>
+                <p>New explorer? <a href="#">Awaken Account</a></p>
+                <a href="index.html" class="back-home-link">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"/></svg>
+                    <span>Return to Journey</span>
+                </a>
             </div>
         </div>
     </div>

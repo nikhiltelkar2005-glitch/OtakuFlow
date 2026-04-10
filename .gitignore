@@ -1,0 +1,7 @@
+# Otaku Flow - Ignore List
+# These files will not be uploaded to GitHub.
+config.js
+.DS_Store
+node_modules/
+dist/
+.env

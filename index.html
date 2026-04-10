@@ -8,36 +8,64 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Outfit:wght@400;600;700;800;900&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class="type-selection-overlay" id="selection-overlay">
+    <!-- 1. DISCOVERY JOURNEY OVERLAY (Hidden by Default) -->
+    <div class="type-selection-overlay hidden" id="selection-overlay">
+        <!-- Floating anime background decorations -->
+        <div class="anime-bg-layer">
+            <div class="bokeh-layer"></div>
+            <div class="particle-field"></div>
+            <div class="god-rays"></div>
+            <span class="floating-deco deco-1">⚔️</span>
+            <span class="floating-deco deco-2">🍃</span>
+            <span class="floating-deco petal-3">⚔️</span>
+            <span class="floating-deco petal-4">🍃</span>
+            <span class="floating-deco petal-5">⚔️</span>
+            <span class="floating-deco petal-6">🍃</span>
+            <span class="floating-deco star-1">✦</span>
+            <span class="floating-deco star-2">✦</span>
+            <span class="floating-deco star-3">✦</span>
+            <span class="floating-deco star-4">✦</span>
+            <span class="floating-deco star-5">✦</span>
+            <span class="floating-deco star-6">✦</span>
+            <div class="glow-orb orb-1"></div>
+            <div class="glow-orb orb-2"></div>
+            <div class="glow-orb orb-3"></div>
+        </div>
         <div class="selection-content">
             <div class="selection-progress">
                 <div class="progress-step active" data-step="1"></div>
                 <div class="progress-step" data-step="2"></div>
                 <div class="progress-step" data-step="3"></div>
             </div>
-            <h1 class="selection-title" id="selection-title">CHOOSE YOUR PATH</h1>
-            <p class="selection-subtitle" id="selection-subtitle">Select a genre to begin your discovery</p>
+            <h1 class="selection-title" id="selection-title">Every journey begins with a choice</h1>
+            <p class="selection-subtitle" id="selection-subtitle">What story calls to you?</p>
             <div class="type-grid" id="selection-grid">
                 <!-- Content injected by app.js -->
             </div>
         </div>
     </div>
+
+    <!-- 2. MAIN HEADER & NAVIGATION -->
     <header class="header">
-        <div class="logo">
+        <a href="index.html" class="logo">
             <div class="logo-icon">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="m5 3 14 9-14 9V3z"/></svg>
+                <img src="logo/4cbf992843f12bc40618bfadd3aa9a9a.jpg" alt="Zoro Jolly Roger">
             </div>
             <span class="logo-text">OTAKU<span class="flow-accent">FLOW</span></span>
-        </div>
+        </a>
         <nav class="nav-links">
-            <a href="#" class="active" id="btn-home">Home</a>
-            <a href="#" id="btn-first-time">Newbie Hub</a>
-            <a href="#" id="btn-top">Heat</a>
-            <a href="#" id="btn-most-watched">Binge Zone</a>
-            <a href="#" id="btn-trending">New Stuff</a>
-            <a href="#" id="btn-for-you">For You</a>
+            <a href="#" class="active" id="btn-home">HOME</a>
+            <a href="#" id="btn-select-path">SELECT PATH</a>
+            <a href="#" id="btn-first-time">NEWBIE HUB</a>
+            <a href="#" id="btn-top">HEAT</a>
+            <a href="#" id="btn-most-watched">BINGE ZONE</a>
+            <a href="#" id="btn-trending">NEW STUFF</a>
+            <a href="#" id="btn-for-you">FOR YOU</a>
         </nav>
         <div class="header_act">
+            <button class="icon_botton compass-btn" id="btn-compass" title="Zoro's Compass">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="m16.24 7.76-2.12 6.36-6.36 2.12 2.12-6.36 6.36-2.12z"/></svg>
+            </button>
             <button class="icon_botton" id="theme-toggle">
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="moon-icon"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="sun-icon" style="display:none;"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
@@ -54,6 +82,11 @@
         <input type="text" id="search-input" placeholder="Search anime, episodes...">
         <button id="btn-search">SEARCH</button>
     </div>
+
+    <!-- 3. TOP CINEMA BANNER (Hero Video) -->
+    <section id="hero-blade" class="hero-blade"></section>
+
+    <!-- 4. MAIN CONTENT AREA (Grid Display) -->
     <main class="content-container">
         <div class="content-header">
             <h1 class="header-title" id="current-category">Home — Discover</h1>
@@ -67,6 +100,8 @@
         <div id="output">
         </div>
     </main>
+
+    <!-- 5. USER PROFILE SIDEBAR -->
     <div class="sidebar-overlay" id="sidebar-overlay"></div>
     <div class="profile-sidebar" id="profile-sidebar">
         <div class="sidebar-header">
@@ -96,6 +131,7 @@
                 Settings
             </a>
             <div class="sidebar-menu-divider"></div>
+
             <div class="sidebar-menu-group">
                 <a href="#" class="sidebar_menu_item">
                     <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
@@ -113,6 +149,7 @@
             </a>
         </div>
     </div>
+    <script src="config.js"></script>
     <script src="app.js"></script>
 </body>
 </html>
